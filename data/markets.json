@@ -1,0 +1,161 @@
+[
+  {
+    "id": 9036428143,
+    "region": "Кърджали",
+    "town": "Момчилград",
+    "marketName": "Темаркет",
+    "products": [
+      {
+        "id": 8348890359,
+        "name": "Масло 'President'",
+        "quantity": 60,
+        "expireDate": "2025-03-10",
+        "normalPrice": 1.2,
+        "salePrice": 0.95,
+        "image": "https://example.com/images/bread.jpg"
+      },
+      {
+        "id": 6332411865,
+        "name": "Кашкавал 'Балкан'",
+        "quantity": 58,
+        "expireDate": "2025-04-15",
+        "normalPrice": 2.5,
+        "salePrice": 1.99,
+        "image": "https://example.com/images/milk.jpg"
+      },
+      {
+        "id": 5847142540,
+        "name": "Сирене 'Елит'",
+        "quantity": 3,
+        "expireDate": "05.12.2025",
+        "normalPrice": 8.7,
+        "salePrice": 7.2,
+        "placeAtStore": "R2S5P6"
+      },
+      {
+        "id": 9225240372,
+        "name": "Майонеза 'Краси'",
+        "quantity": 5,
+        "expireDate": "05.12.2025",
+        "normalPrice": 3,
+        "salePrice": 2.5,
+        "placeAtStore": "R6S8P1"
+      }
+    ],
+    "password": "12312312",
+    "status": "active",
+    "address": "ул. Тест"
+  },
+  {
+    "id": 9036888143,
+    "region": "Кърджали",
+    "town": "Кърджали",
+    "marketName": "Била",
+    "products": [
+      {
+        "id": 3210636097,
+        "name": "Сирене 'Саяна'",
+        "quantity": 32,
+        "expireDate": "2025-04-15",
+        "normalPrice": 2.5,
+        "salePrice": 1.99,
+        "image": "https://example.com/images/milk.jpg"
+      },
+      {
+        "id": 8348890359,
+        "name": "Масло 'President'",
+        "quantity": 6660,
+        "expireDate": "2025-03-10",
+        "normalPrice": 1.2,
+        "salePrice": 0.99,
+        "image": "https://example.com/images/bread.jpg"
+      },
+      {
+        "id": 6332411865,
+        "name": "Кашкавал 'Балкан'",
+        "quantity": 60,
+        "expireDate": "2025-04-15",
+        "normalPrice": 2.5,
+        "salePrice": 1.99,
+        "image": "https://example.com/images/milk.jpg"
+      },
+      {
+        "id": 5847142540,
+        "name": "Сирене 'Елит'",
+        "quantity": 3,
+        "expireDate": "05.12.2025",
+        "normalPrice": 8.7,
+        "salePrice": 7.2,
+        "placeAtStore": "R2S5P6"
+      },
+      {
+        "id": 9225240372,
+        "name": "Майонеза 'Краси'",
+        "quantity": 5,
+        "expireDate": "05.12.2025",
+        "normalPrice": 3,
+        "salePrice": 2.5,
+        "placeAtStore": "R6S8P1"
+      }
+    ],
+    "password": "12312312",
+    "status": "active",
+    "address": "ул. Тест"
+  },
+  {
+    "id": 9036488143,
+    "region": "Пловдив",
+    "town": "Пловдив",
+    "marketName": "Била",
+    "products": [
+      {
+        "id": 3210636097,
+        "name": "Сирене 'Саяна'",
+        "quantity": 32,
+        "expireDate": "2025-04-15",
+        "normalPrice": 2.5,
+        "salePrice": 1.99,
+        "image": "https://example.com/images/milk.jpg"
+      },
+      {
+        "id": 8348890359,
+        "name": "Масло 'President'",
+        "quantity": 6660,
+        "expireDate": "2025-03-10",
+        "normalPrice": 1.2,
+        "salePrice": 0.99,
+        "image": "https://example.com/images/bread.jpg"
+      },
+      {
+        "id": 6332411865,
+        "name": "Кашкавал 'Балкан'",
+        "quantity": 60,
+        "expireDate": "2025-04-15",
+        "normalPrice": 2.5,
+        "salePrice": 1.99,
+        "image": "https://example.com/images/milk.jpg"
+      },
+      {
+        "id": 5847142540,
+        "name": "Сирене 'Елит'",
+        "quantity": 3,
+        "expireDate": "05.12.2025",
+        "normalPrice": 8.7,
+        "salePrice": 7.2,
+        "placeAtStore": "R2S5P6"
+      },
+      {
+        "id": 9225240372,
+        "name": "Майонеза 'Краси'",
+        "quantity": 5,
+        "expireDate": "05.12.2025",
+        "normalPrice": 3,
+        "salePrice": 2.5,
+        "placeAtStore": "R6S8P1"
+      }
+    ],
+    "password": "123123",
+    "status": "active",
+    "address": "ул. Тест"
+  }
+]
