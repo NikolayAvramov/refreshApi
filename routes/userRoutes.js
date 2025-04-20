@@ -1,7 +1,7 @@
 import express from "express";
 import { getDataFromFile, saveDataToFile } from "../services/dataService.js";
 import idGenerator from "../services/idGenerator.js";
-import bcrypt from "bcrypt"; // For secure password checking
+import bcrypt from "bcryptjs"; // Changed from bcrypt to bcryptjs
 import jwt from "jsonwebtoken"; // For JWT generation
 import authenticateToken from "../middleware/authentication.js";
 import dotenv from "dotenv";
