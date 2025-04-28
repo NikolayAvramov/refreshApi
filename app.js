@@ -3,7 +3,6 @@ import bodyParser from "body-parser";
 import userRoutes from "./routes/userRoutes.js";
 import marketRoutes from "./routes/marketRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
-import orderRoutes from "./routes/orderRoutes.js";
 import cors from "cors";
 
 const app = express();
@@ -12,6 +11,5 @@ app.use(bodyParser.json());
 app.use("/users", userRoutes);
 app.use("/markets", marketRoutes);
 app.use("/markets", productRoutes);
-app.use("/orders", orderRoutes);
 
 export default app;

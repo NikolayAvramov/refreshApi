@@ -89,27 +89,14 @@ router.post("/login", async (req, res) => {
       return res.status(401).json({ message: "Invalid password" });
     }
 
-    // Create access token (short-lived)
-    const accessToken = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, {
+    // Create JWT token after successful login
+    const token = jwt.sign({ userId: user.id }, JWT_SECRET, {
       expiresIn: "1h",
-    });
-
-    // Create refresh token (long-lived)
-    const refreshToken = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, {
-      expiresIn: "7d",
     });
 
     res.status(200).json({
       message: "Login successful",
-      accessToken,
-      refreshToken,
-      user: {
-        id: user.id,
-        username: user.username,
-        email: user.email,
-        firstName: user.firstName,
-        lastName: user.lastName
-      }
+      token, // Send token in response
     });
   } catch (error) {
     res.status(500).json({ message: "Error logging in" });
@@ -185,65 +172,6 @@ router.delete("/profile", authenticateToken, async (req, res) => {
     res.status(200).json({ message: "User profile deleted successfully" });
   } catch (error) {
     res.status(500).json({ message: "Error deleting profile" });
-  }
-});
-
-// Add this new route before the export
-router.post('/refresh-token', async (req, res) => {
-  try {
-    const { refreshToken } = req.body;
-
-    if (!refreshToken) {
-      return res.status(401).json({ 
-        message: "Refresh token is required",
-        error: "REFRESH_TOKEN_MISSING"
-      });
-    }
-
-    // Verify the refresh token
-    const decoded = jwt.verify(refreshToken, process.env.JWT_SECRET);
-    
-    // Get user data
-    const users = await getDataFromFile('user');
-    const user = users.find(u => u.id === decoded.userId);
-
-    if (!user) {
-      return res.status(404).json({ 
-        message: "User not found",
-        error: "USER_NOT_FOUND"
-      });
-    }
-
-    // Generate new tokens
-    const newAccessToken = jwt.sign(
-      { userId: user.id },
-      process.env.JWT_SECRET,
-      { expiresIn: '1h' }
-    );
-
-    const newRefreshToken = jwt.sign(
-      { userId: user.id },
-      process.env.JWT_SECRET,
-      { expiresIn: '7d' }
-    );
-
-    res.json({
-      accessToken: newAccessToken,
-      refreshToken: newRefreshToken,
-      message: "Tokens refreshed successfully"
-    });
-  } catch (error) {
-    if (error.name === 'TokenExpiredError') {
-      return res.status(401).json({ 
-        message: "Refresh token has expired",
-        error: "REFRESH_TOKEN_EXPIRED"
-      });
-    }
-    
-    return res.status(401).json({ 
-      message: "Invalid refresh token",
-      error: "REFRESH_TOKEN_INVALID"
-    });
   }
 });
 
